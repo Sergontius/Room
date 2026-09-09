@@ -26,7 +26,7 @@ abstract class MainDb : RoomDatabase(){
     companion object { //в отличие от обьекта не имеет имени, он тоже синглтон(создасться 1 раз), как и обьект
         fun createDatabase(context : Context) : MainDb { //context - это мостик между нашим приложением и Android
             return Room.databaseBuilder(
-                context,
+                context, //
                 MainDb :: class.java,
                "room.db",
             ).build()
